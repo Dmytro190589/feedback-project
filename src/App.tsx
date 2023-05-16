@@ -1,5 +1,4 @@
-import React from "react";
-
-export const App: React.FC = () => {
-  return <h1>Hello ts!</h1>;
+const App = () => {
+  return <div>Работает</div>;
 };
+export default App;
