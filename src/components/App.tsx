@@ -1,7 +1,7 @@
 import Layout from 'components/Layout/Layout';
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Suggestions } from './Suggestions/Suggestions';
+import { Suggestions } from '../pages/Suggestions/Suggestions';
 
 const App: FC = () => {
   return (
