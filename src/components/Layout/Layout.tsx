@@ -1,13 +1,13 @@
-import Header from 'components/Header/Header';
+import SideBar from 'components/SideBar/SideBar';
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const SaidBar: FC = () => {
+const Layout: FC = () => {
   return (
     <>
-      <Header />
+      <SideBar />
       <Outlet />
     </>
   );
 };
-export default SaidBar;
+export default Layout;
