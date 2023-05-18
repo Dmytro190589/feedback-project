@@ -8,8 +8,8 @@ const App: FC = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Hello!!!</div>}/>
-          <Route path="/suggestions" element={<Suggestions/>}></Route>
+          <Route index element={<div>Hello!!!</div>} />
+          <Route path="/suggestions" element={<Suggestions />}></Route>
         </Route>
       </Routes>
     </>
