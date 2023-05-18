@@ -14,7 +14,7 @@ const Header: FC = () => {
           <AiOutlineMenu />
         </NavIcon>
       </Box>
-      <SaidBarNav></SaidBarNav>
+      {/* <SaidBarNav></SaidBarNav> */}
     </IconContext.Provider>
   );
 };
