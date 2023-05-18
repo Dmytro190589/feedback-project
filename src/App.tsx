@@ -6,9 +6,9 @@ import { Routes, Route } from 'react-router-dom';
 const App: FC = () => {
   return (
     <>
+    <SaidBar />
       <Routes>
-        <Route path="/" element={<SaidBar />} />
-        <Route path="/overview" element={<Overview />}></Route>
+        <Route index element={<Overview />}></Route>
       </Routes>
     </>
   );
