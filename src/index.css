@@ -1,6 +1,23 @@
-body {
-  background-color: #F7F8FD;
+* {
   margin: 0;
+  box-sizing: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+body {
+  background-color: #f7f8fd;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

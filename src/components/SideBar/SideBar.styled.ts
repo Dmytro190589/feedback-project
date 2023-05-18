@@ -23,7 +23,6 @@ export const SaidBarNav = styled.div<{ sidebar: boolean }>`
 
 export const List = styled.ul`
   color: #fff;
-  list-style: none;
 `;
 export const NavIcon = styled(Link)`
   display: flex;
