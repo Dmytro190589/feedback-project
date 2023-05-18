@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import imgMobile from '../../images/mobile/background-header.png';
 
 export const Box = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
   padding: 16px 24px;
-
-  background-color: red;
+  background-image: url(${imgMobile});
+  background-size: cover;
 `;
 export const SaidBarNav = styled.div`
   width: 271px;
