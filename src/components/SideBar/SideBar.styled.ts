@@ -17,11 +17,12 @@ export const SaidBarNav = styled.div<{ sidebar: boolean }>`
   position: fixed;
   background-color: #979797;
   top: 72px;
-  right: ${({sidebar}) => (sidebar ? '0' : '-100%')};
+  right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
 `;
 
 export const List = styled.ul`
+  color: #fff;
   list-style: none;
 `;
 export const NavIcon = styled(Link)`
