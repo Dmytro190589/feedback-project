@@ -1,9 +1,13 @@
 import { FC, useState } from 'react';
-import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './SideBar.styled';
+import {
+  Box,
+  List,
+  NavIcon,
+  SaidBarNav,
+  SideBarWrap,
+} from '../Sidebar/SideBar.styled';
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-
-
 
 const SideBar: FC = () => {
   const [sidebar, setSidebar] = useState(false);
