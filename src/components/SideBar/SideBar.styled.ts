@@ -15,7 +15,7 @@ export const SaidBarNav = styled.div<{ sidebar: boolean }>`
   width: 271px;
   height: 100vh;
   position: fixed;
-  background-color: #979797;
+  background-color: #F7F8FD;
   top: 72px;
   right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
@@ -31,4 +31,32 @@ export const NavIcon = styled(Link)`
   width: 16px;
   height: 16px;
 `;
-export const SideBarWrap = styled.div``;
+export const SideBarWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 223px;
+  height: 178px;
+  flex-wrap: wrap;
+  padding: 24px;
+`;
+export const SidebarLink = styled(Link)`
+  color: #4661e6;
+  height: 30px;
+  background-color: #f2f4ff;
+  padding: 6px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: #4661e6;
+    color: #f2f4ff;
+  }
+`;
+export const SidebarLabel = styled.span`
+  margin-right: 6px;
+`;
+export const Item = styled.div`
+  width: auto;
+`;

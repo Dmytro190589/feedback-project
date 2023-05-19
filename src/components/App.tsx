@@ -8,7 +8,12 @@ const App: FC = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<div>Hello!!!</div>} />
+          <Route path="/all" element={<div>all!!!</div>} />
+          <Route path="/ui" element={<div>ui!!!</div>} />
+          <Route path="/ux" element={<div>ux!!!</div>} />
+          <Route path="/enhancement" element={<div>en!!!</div>} />
+          <Route path="/bug" element={<div>bug!!!</div>} />
+          <Route path="/feature" element={<div>feature!!!</div>} />
           <Route path="/suggestions" element={<Suggestions />}></Route>
         </Route>
       </Routes>
