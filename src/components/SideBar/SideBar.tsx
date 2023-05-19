@@ -1,15 +1,9 @@
 import { FC, useState } from 'react';
-import {
-  Box,
-  List,
-  NavIcon,
-  SaidBarNav,
-  SideBarWrap,
-} from '../Sidebar/SideBar.styled';
+import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './sideBar.styled';
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { SidebarData } from './SidebarData';
-import SidebarMenu from './SidebarMenu';
+import { SidebarData } from './sideBarData';
+import SidebarMenu from './sideBarMenu';
 import RoadMap from './RoadMap';
 
 const SideBar: FC = () => {
