@@ -2,7 +2,7 @@ import SideBar from 'components/Sidebar/SideBar';
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const Layout: FC = () => {
+export const SharedLayout: FC = () => {
   return (
     <>
       <SideBar />
@@ -10,4 +10,3 @@ const Layout: FC = () => {
     </>
   );
 };
-export default Layout;
