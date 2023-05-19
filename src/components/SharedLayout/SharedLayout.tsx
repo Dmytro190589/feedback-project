@@ -1,4 +1,4 @@
-import SideBar from 'components/Sidebar/SideBar';
+import SideBar from 'components/work/SideBar';
 import { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
