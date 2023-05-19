@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 const Li = styled.li`
   display: flex;
-  list-style-type: circle;
   justify-content: space-between;
 `;
 
