@@ -8,6 +8,9 @@ import {
 } from '../Sidebar/SideBar.styled';
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { SidebarData } from './SidebarData';
+import SidebarMenu from './SidebarMenu';
+import RoadMap from './RoadMap';
 
 const SideBar: FC = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -25,7 +28,12 @@ const SideBar: FC = () => {
         </NavIcon>
       </Box>
       <SaidBarNav sidebar={sidebar}>
-        <SideBarWrap></SideBarWrap>
+        <SideBarWrap>
+          {SidebarData.map((item, index) => {
+            return <SidebarMenu item={item} key={index} />;
+          })}
+          <RoadMap />
+        </SideBarWrap>
       </SaidBarNav>
     </IconContext.Provider>
   );
