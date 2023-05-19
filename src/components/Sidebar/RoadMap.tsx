@@ -5,7 +5,6 @@ const Li = styled.li`
   display: flex;
   list-style-type: circle;
   justify-content: space-between;
-  list-style: circle;
 `;
 
 const RoadMap: FC = () => {
