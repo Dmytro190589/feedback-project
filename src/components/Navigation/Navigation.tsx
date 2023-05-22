@@ -1,12 +1,18 @@
 import { FC, useState } from 'react';
 
-import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './SideBar.styled';
+import {
+  Box,
+  List,
+  NavIcon,
+  SaidBarNav,
+  SideBarWrap,
+} from './Navigation.styled';
 
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { SidebarData } from './sideBarData';
-import SideBarMenu from './SidebarMenu';
-import RoadMap from './RoadMap';
+import { SidebarData } from '../Navigation/NavigationData/NavigationData';
+import SideBarMenu from './NavigateMenu/Menu';
+import SatusMap from './StatusMap/StatusMap';
 
 const SideBar: FC = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -28,7 +34,7 @@ const SideBar: FC = () => {
           {SidebarData.map((item, index) => {
             return <SideBarMenu item={item} key={index} />;
           })}
-          <RoadMap />
+          <SatusMap />
         </SideBarWrap>
       </SaidBarNav>
     </IconContext.Provider>
