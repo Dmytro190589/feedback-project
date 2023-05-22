@@ -5,7 +5,7 @@ import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './SideBar.styled';
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SidebarData } from './sideBarData';
-import SidebarMenu from './sideBarMenu';
+import SideBarMenu from './SidebarMenu';
 import RoadMap from './RoadMap';
 
 const SideBar: FC = () => {
@@ -26,7 +26,7 @@ const SideBar: FC = () => {
       <SaidBarNav sidebar={sidebar ? 1 : undefined}>
         <SideBarWrap>
           {SidebarData.map((item, index) => {
-            return <SidebarMenu item={item} key={index} />;
+            return <SideBarMenu item={item} key={index} />;
           })}
           <RoadMap />
         </SideBarWrap>

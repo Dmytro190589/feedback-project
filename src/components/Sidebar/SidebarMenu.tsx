@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { SidebarItems } from 'models/SidebarItems';
-import { Item, SidebarLabel, SidebarLink } from './sideBar.styled';
+import { Item, SidebarLabel, SidebarLink } from './SideBar.styled';
 
 type SidebarLinkProps = {
   item: SidebarItems;
 };
 
-const SidebarMenu: FC<SidebarLinkProps> = ({ item }) => {
+const SideBarMenu: FC<SidebarLinkProps> = ({ item }) => {
   return (
     <>
       <SidebarLink to={item.path}>
@@ -17,4 +17,4 @@ const SidebarMenu: FC<SidebarLinkProps> = ({ item }) => {
     </>
   );
 };
-export default SidebarMenu;
+export default SideBarMenu;
