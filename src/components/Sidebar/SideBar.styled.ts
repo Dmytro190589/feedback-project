@@ -11,7 +11,7 @@ export const Box = styled.div`
   background-image: url(${imgMobile});
   background-size: cover;
 `;
-export const SaidBarNav = styled.div<{ sidebar: boolean }>`
+export const SaidBarNav = styled.div<{ sidebar: number | undefined }>`
   width: 271px;
   height: 100vh;
   position: fixed;

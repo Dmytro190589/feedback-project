@@ -1,5 +1,7 @@
 import { FC, useState } from 'react';
-import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './sideBar.styled';
+
+import { Box, List, NavIcon, SaidBarNav, SideBarWrap } from './SideBar.styled';
+
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { SidebarData } from './sideBarData';
@@ -21,7 +23,7 @@ const SideBar: FC = () => {
           {!sidebar ? <AiOutlineMenu /> : <AiOutlineClose />}
         </NavIcon>
       </Box>
-      <SaidBarNav sidebar={sidebar}>
+      <SaidBarNav sidebar={sidebar ? 1 : undefined}>
         <SideBarWrap>
           {SidebarData.map((item, index) => {
             return <SidebarMenu item={item} key={index} />;
