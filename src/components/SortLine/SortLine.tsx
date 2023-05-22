@@ -7,6 +7,8 @@ const SortLine: FC = () => {
   const [sort, setSort] = useState('Most Upvotes');
   const test = () => {
     console.log('sorting line');
+    setSort(sort);
+    
   };
 ;
   return (
