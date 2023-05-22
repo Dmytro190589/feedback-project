@@ -5,7 +5,7 @@ import { Button } from 'components/Buttons/Button';
 
 const NotFoundFeedback: FC = () => {
   const test = () => {
-    console.log('not Found');
+    console.log(' Not Found');
   };
 
   return (
