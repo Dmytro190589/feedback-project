@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-
+import { ReactComponent as ArrowLeft } from 'icons/icon-arrow-left.svg';
 interface IProps {
   children: React.ReactNode;
   onClose: () => void;
@@ -44,9 +44,32 @@ export default function Modal({ onClose, children }: IProps) {
         left: 0,
         width: '100%',
         height: '100vh',
+        backgroundColor: '#fff',
       }}
     >
-      {children}
+      <div
+        style={{
+          position: 'relative',
+          minWidth: '375px',
+          minHeight: '893px',
+          backgroundColor: '#F2F2F2',
+          padding: '88px 24px 77px 24px',
+          borderRadius: '16px',
+        }}
+      >
+        <button
+          style={{
+            color: 'red',
+            position: 'absolute',
+            top: '30px',
+            left: '0',
+          }}
+        >
+          <ArrowLeft style={{ marginRight: '16px' }} /> Go Back
+        </button>
+
+        {children}
+      </div>
     </div>,
     modalEl
   );
