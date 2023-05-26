@@ -1,4 +1,4 @@
-import { SidebarItems } from '../../../models/SidebarItems';
+import { SidebarItems } from '../../../models/SidebarTypes';
 
 export const SidebarData: SidebarItems[] = [
   {

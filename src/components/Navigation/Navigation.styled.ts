@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import imgMobile from '../../images/mobile/background-header.png';
+import { ReactComponent as NavBurger } from 'icons/mobile/icon-hamburger.svg';
+import { ReactComponent as NavClose } from 'icons/mobile/icon-close.svg';
 
 export const Box = styled.div`
   display: flex;
@@ -39,4 +41,11 @@ export const SideBarWrap = styled.div`
   height: 178px;
   flex-wrap: wrap;
   padding: 24px;
+`;
+
+export const BurgerMenu = styled(NavBurger)`
+
+`;
+export const CloseMenu = styled(NavClose)`
+
 `;

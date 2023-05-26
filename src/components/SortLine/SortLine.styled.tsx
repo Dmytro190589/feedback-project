@@ -6,6 +6,6 @@ export const SortBox = styled.div`
   align-items: center;
   width: 100%;
   height: 56px;
-  background: #373f68;
+  background-color: #373f68;
   margin-bottom: 32px;
 `;
