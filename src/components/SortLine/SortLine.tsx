@@ -11,7 +11,7 @@ const SortLine: FC = () => {
 
   const modalOpen = () => setIsModal(true);
   const submit = () => setSort(sort);
- 
+
   return (
     <SortBox>
       <div>
