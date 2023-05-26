@@ -24,7 +24,6 @@ export default function Modal({ onClose, children }: IProps) {
     };
   }, [onClose]);
 
-
   const handleBackdropCloseModal = ({
     target,
     currentTarget,
@@ -44,22 +43,10 @@ export default function Modal({ onClose, children }: IProps) {
         top: 0,
         left: 0,
         width: '100%',
-        height: '100%',
-        backgroundColor: 'rgb(0, 0, 0, 0.8)',
+        height: '100vh',
       }}
     >
-      <div
-        style={{
-          position: 'relative',
-          minWidth: '600px',
-          minHeight: '400px',
-          backgroundColor: '#FFFFFF',
-          padding: '32px',
-          borderRadius: '16px',
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </div>,
     modalEl
   );

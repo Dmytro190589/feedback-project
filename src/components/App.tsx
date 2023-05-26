@@ -7,7 +7,6 @@ const App: FC = () => {
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route path="/all" element={<div>all!!!</div>} />
           <Route path="/ui" element={<div>ui!!!</div>} />
           <Route path="/ux" element={<div>ux!!!</div>} />
           <Route path="/enhancement" element={<div>en!!!</div>} />
