@@ -8,6 +8,7 @@ export const StyledPlusIcon = styled(PlusIcon)`
 
 export const Box = styled.div`
   position: relative;
+  height: 728px;
   margin: 88px 24px 77px 24px;
   border-radius: 10px;
 

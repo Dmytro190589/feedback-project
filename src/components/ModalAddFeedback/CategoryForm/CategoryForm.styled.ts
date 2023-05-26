@@ -4,7 +4,7 @@ export const FeedbackTitle = styled.label`
   margin-bottom: 0;
 `;
 export const Input = styled.input`
-  width: 100%;
+  width: auto;
   height: 48px;
 `;
 export const Description = styled.p`
@@ -19,7 +19,7 @@ export const Category = styled.h2`
   margin-top: 24px;
 `;
 export const InputDetails = styled.input`
-  width: 100%;
+  width: auto;
   height: 120px;
   margin-bottom: 40px;
 `;

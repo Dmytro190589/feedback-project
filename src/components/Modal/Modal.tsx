@@ -44,6 +44,7 @@ export default function Modal({ onClose, children }: IProps) {
         left: 0,
         width: '100%',
         height: '100vh',
+        backgroundColor:"#F2F2F2"
       }}
     >
       {children}
