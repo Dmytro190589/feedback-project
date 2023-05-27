@@ -43,7 +43,7 @@ export default function Modal({ onClose, children }: IProps) {
         top: 0,
         left: 0,
         width: '100%',
-        height: '100vh',
+        height: '100%',
         backgroundColor: '#fff',
       }}
     >
@@ -61,8 +61,8 @@ export default function Modal({ onClose, children }: IProps) {
           style={{
             color: 'red',
             position: 'absolute',
-            top: '30px',
-            left: '0',
+            top: '90px',
+            left: '24px',
           }}
         >
           <ArrowLeft style={{ marginRight: '16px' }} /> Go Back
