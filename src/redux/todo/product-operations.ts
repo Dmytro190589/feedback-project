@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { Product } from 'types/todo';
 
 
-axios.defaults.baseURL = 'https://my-json-server.typicode.com/VLadIslavSurkov/jsonn';
+axios.defaults.baseURL = 'https://my-json-server.typicode.com/VLadIslavSurkov/json';
 
 export const fetchProducts = createAsyncThunk<Product[], void, { rejectValue: string }>(
     '/suggestions',
@@ -13,7 +13,6 @@ export const fetchProducts = createAsyncThunk<Product[], void, { rejectValue: st
             return res.data 
         } catch (e) {
             const err = e as AxiosError
-            console.log(err.message);
             return rejectWithValue(err.message);
         }
     }

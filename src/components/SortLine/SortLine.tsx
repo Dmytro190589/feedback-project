@@ -1,12 +1,11 @@
 import { Button } from 'components/Buttons/Button';
 import { SortBox } from './SortLine.styled';
 import { FC, useState } from 'react';
-import { BiChevronDown } from 'react-icons/bi';
 import Modal from 'components/Modal/Modal';
 import ModalAddFeedback from 'components/ModalAddFeedback/ModalAddFeedback';
 import { Dropdown } from 'components/Dropdown/Dropdown';
 import { SortItem } from 'components/Dropdown/CategoriesItems';
-import { IndicatorSeparator } from 'components/Dropdown/Dropdown.steled';
+
 
 const SortLine: FC = () => {
   const [sort, setSort] = useState('Most Upvotes');
