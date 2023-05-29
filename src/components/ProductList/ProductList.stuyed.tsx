@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PayloadAction } from '@reduxjs/toolkit';
+
 
 export const ProductBox = styled.div`
   display: flex;

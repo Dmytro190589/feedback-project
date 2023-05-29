@@ -1,7 +1,7 @@
 import Select, { OnChangeValue   } from 'react-select';
 import { useState, FC } from 'react';
 import { IOption } from 'models/CategoriesTypes';
-import { IndicatorSeparator } from './Dropdown.steled';
+import { IndicatorSeparator } from './Dropdown.styled';
 
 interface CurrentProps {
   prop: IOption[];
