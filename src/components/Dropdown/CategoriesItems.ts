@@ -25,4 +25,23 @@ export const categoriesItem: IOption[] = [
       value: 'feature',
       label: 'Feature',
     },
-  ];
+];
+  
+export const SortItem: IOption[] = [
+  {
+    value: 'most Upvotes',
+    label: 'Most Upvotes',
+  },
+  {
+    value: 'least Upvotes',
+    label: 'Least Upvotes',
+  },
+  {
+    value: 'most Comments',
+    label: 'Most Comments',
+  },
+  {
+    value: 'least Comments',
+    label: 'Least Comments',
+  }
+];

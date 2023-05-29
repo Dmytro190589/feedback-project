@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Formik } from 'formik';
-import { Dropdown } from '../Dropdown/Dropdown';
+import { Dropdown } from '../../Dropdown/Dropdown';
 import { Button } from 'components/Buttons/Button';
 import {
   FeedbackTitle,
@@ -12,6 +12,7 @@ import {
   Label,
   Title,
 } from './CategoryForm.styled';
+import { categoriesItem } from '../../Dropdown/CategoriesItems';
 
 interface MyFormValues {
   feedback: string;
@@ -37,7 +38,7 @@ export const CategoryForm: React.FC<{}> = () => {
           <Input id="feedback" name="feedback" />
           <Category>Category</Category>
           <Description>Choose a category for your feedback</Description>
-          <Dropdown />
+          <Dropdown prop={categoriesItem} />
           <Label htmlFor="details">Feedback Detail</Label>
           <Description>
             Include any specific comments on what should be improved, added,
