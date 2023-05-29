@@ -1,5 +1,5 @@
 export type Product = {
-    id: number;
+    id: string;
     title: string
     category: string,
     upvotes: number,
@@ -8,11 +8,14 @@ export type Product = {
     comments: any[]
 }
 
-
 export interface ItodoState {
     productRequests: Product[];
     isLoading: boolean,
     error: null | string,
+}
+
+export interface List {
+    products: Product[];
 }
 
 
