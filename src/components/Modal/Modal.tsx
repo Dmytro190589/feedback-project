@@ -43,7 +43,7 @@ export default function Modal({ onClose, children }: IProps) {
         top: 0,
         left: 0,
         width: '100%',
-        height: '100vh',
+        height: '100%',
         backgroundColor: '#fff',
       }}
     >
@@ -52,17 +52,16 @@ export default function Modal({ onClose, children }: IProps) {
           position: 'relative',
           minWidth: '375px',
           minHeight: '893px',
-          backgroundColor: '#F2F2F2',
           padding: '88px 24px 77px 24px',
+          backgroundColor: '#F2F2F2',
           borderRadius: '16px',
         }}
       >
         <button
           style={{
-            color: 'red',
             position: 'absolute',
-            top: '30px',
-            left: '0',
+            top: '50px',
+            color: 'red',
           }}
         >
           <ArrowLeft style={{ marginRight: '16px' }} /> Go Back

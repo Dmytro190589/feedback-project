@@ -3,16 +3,15 @@ import { ReactComponent as PlusIcon } from 'icons/icon-new-feedback.svg';
 
 export const StyledPlusIcon = styled(PlusIcon)`
   position: absolute;
-  top: -72px;
-  left: 0;
+  top: 0;
+  left:28px;
 `;
 
 export const Box = styled.div`
   position: relative;
-  max-height: 728px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-radius: 10px;
-
-  background-color: #fff;
+  /* min-width: 375px;
+  min-height: 893px;
+  border-radius: 10px; */
+  padding: 64px 24px 24px 24px;
+  background-color: #f2f2f2;
 `;
