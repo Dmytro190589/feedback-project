@@ -45,7 +45,7 @@ export const CategoryForm: React.FC<{}> = () => {
             etc.
           </Description>
           <InputDetails id="details" name="details" />
-          <Button color="first" width="addSave" margin-bottom="16px">
+          <Button color="first" width="addSave">
             Add Feedback
           </Button>
           <Button color="third" width="delete">

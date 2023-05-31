@@ -5,7 +5,6 @@ import { IndicatorSeparator } from './Dropdown.styled';
 
 interface CurrentProps {
   prop: IOption[];
-  // component:any
 }
 
 export const Dropdown: FC<CurrentProps> = ({ prop }) => {

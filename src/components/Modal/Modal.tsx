@@ -52,17 +52,16 @@ export default function Modal({ onClose, children }: IProps) {
           position: 'relative',
           minWidth: '375px',
           minHeight: '893px',
-          backgroundColor: '#F2F2F2',
           padding: '88px 24px 77px 24px',
+          backgroundColor: '#F2F2F2',
           borderRadius: '16px',
         }}
       >
         <button
           style={{
-            color: 'red',
             position: 'absolute',
-            top: '90px',
-            left: '24px',
+            top: '50px',
+            color: 'red',
           }}
         >
           <ArrowLeft style={{ marginRight: '16px' }} /> Go Back
