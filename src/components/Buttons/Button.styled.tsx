@@ -19,7 +19,6 @@ const COLOR = {
     background: #d73737;
   `,
 };
-
 const WIDTH = {
   openModal: css`
     //mobile
@@ -32,6 +31,7 @@ const WIDTH = {
   addSave: css`
     //mobile
     width: 100%;
+    margin-bottom: 16px;
   `,
   delete: css`
     //mobile
@@ -53,5 +53,3 @@ export const Container = styled.button<ButtonProps>`
   ${props => props.width && WIDTH[props.width]}
   ${props => props.color && COLOR[props.color]}
 `;
-
-

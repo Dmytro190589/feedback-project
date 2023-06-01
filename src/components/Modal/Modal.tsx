@@ -50,8 +50,8 @@ export default function Modal({ onClose, children }: IProps) {
       <div
         style={{
           position: 'relative',
-          minWidth: '375px',
-          minHeight: '893px',
+          minWidth: '350px',
+          minHeight: '800px',
           padding: '88px 24px 77px 24px',
           backgroundColor: '#F2F2F2',
           borderRadius: '16px',

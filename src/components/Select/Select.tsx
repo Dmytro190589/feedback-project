@@ -1,19 +1,17 @@
 import { FC, FocusEventHandler } from 'react';
 import Select, { ActionMeta, SingleValue } from 'react-select';
-export interface ISelectOption {
-  value: string;
-  label: string;
-}
+import { IOption } from 'models/CategoriesTypes';
+
 export interface ISelectProps {
-  options: ISelectOption[];
-  value: ISelectOption;
-  onBlur: FocusEventHandler;
-  onFocus: FocusEventHandler;
-  placeholder: string;
+  options: IOption[];
+  value: IOption | undefined;
+  onBlur?: FocusEventHandler;
+  onFocus?: FocusEventHandler;
+  placeholder?: string;
   onChange:
     | ((
-        newValue: SingleValue<ISelectOption>,
-        actionMeta: ActionMeta<ISelectOption>
+        newValue: SingleValue<IOption>,
+        actionMeta: ActionMeta<IOption>
       ) => void)
     | undefined;
 }
