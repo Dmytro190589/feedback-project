@@ -11,7 +11,9 @@ import {
 } from './ProductList.stuyed';
 
 export const ProductList: FC<List> = ({ products }) => {
-  console.log(products.map(product => product.category.charAt(0)));
+  console.log(products);
+
+
   return (
     <div>
       {products.map(product => (
