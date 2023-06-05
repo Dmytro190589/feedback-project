@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
-import { useState } from 'react';
-import { OnChangeValue } from 'react-select';
+// import { useState } from 'react';
+// import { OnChangeValue } from 'react-select';
 import { Button } from 'components/Buttons/Button';
 import {
   FeedbackTitle,
@@ -12,7 +12,7 @@ import {
   Label,
   Title,
 } from './CategoryForm.styled';
-import { DropdownSelect } from 'components/Select/Select';
+// import { DropdownSelect } from 'components/Select/Select';
 import { IOption } from 'models/CategoriesTypes';
 
 interface CurrentProps {
@@ -24,12 +24,12 @@ interface MyFormValues {
 }
 
 export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
-  const [currentProp, setCurrentProp] = useState(prop[0].value);
+  // const [currentProp, setCurrentProp] = useState(prop[0].value);
   const initialValues: MyFormValues = { feedback: '', details: '' };
-  const getValue = () =>
-    currentProp ? prop.find(e => e.value === currentProp) : undefined;
-  const onChange = (newValue: OnChangeValue<IOption, boolean>) =>
-    setCurrentProp((newValue as IOption).value);
+  // const getValue = () =>
+  //   currentProp ? prop.find(e => e.value === currentProp) : undefined;
+  // const onChange = (newValue: OnChangeValue<IOption, boolean>) =>
+  //   setCurrentProp((newValue as IOption).value);
   return (
     <>
       <Title>Great new feedback</Title>
@@ -47,11 +47,11 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
           <Input id="feedback" name="feedback" />
           <Category>Category</Category>
           <Description>Choose a category for your feedback</Description>
-          <DropdownSelect
+          {/* <DropdownSelect
             options={prop}
             onChange={onChange}
             value={getValue()}
-          />
+          /> */}
           <Label htmlFor="details">Feedback Detail</Label>
           <Description>
             Include any specific comments on what should be improved, added,
