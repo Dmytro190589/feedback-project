@@ -1,5 +1,5 @@
 import { FC, FocusEventHandler } from 'react';
-import Select, { ActionMeta, SingleValue } from 'react-select';
+import Select, { ActionMeta, GroupBase, SingleValue, StylesConfig, ThemeConfig } from 'react-select';
 import { IOption } from 'models/CategoriesTypes';
 
 export interface ISelectProps {
@@ -8,6 +8,11 @@ export interface ISelectProps {
   onBlur?: FocusEventHandler;
   onFocus?: FocusEventHandler;
   placeholder?: string;
+  styles: StylesConfig<IOption, false, GroupBase<IOption>>;
+  theme: ThemeConfig;
+
+  components: any;
+  
   onChange:
     | ((
         newValue: SingleValue<IOption>,
@@ -21,11 +26,17 @@ export const DropdownSelect: FC<ISelectProps> = ({
   onChange,
   onFocus,
   onBlur,
+  styles,
+  theme,
+  components,
   placeholder,
 }) => {
   return (
     <Select
+      styles={styles}
+      theme={theme}
       options={options}
+      components={components}
       classNamePrefix="react-select"
       onChange={onChange}
       onBlur={onBlur}
