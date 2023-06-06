@@ -1,7 +1,7 @@
 import { OnChangeValue} from 'react-select';
 import { useState, FC } from 'react';
 import { IOption } from 'models/CategoriesTypes';
-import { IndicatorSeparator, colourStyles, themeStyles } from './Dropdown.styled';
+import { IndicatorSeparator, colorStyles, themeStyles } from './Dropdown.styled';
 import { DropdownSelect } from 'components/Select/Select';
 
 interface CurrentProps {
@@ -19,7 +19,7 @@ export const Dropdown: FC<CurrentProps> = ({ prop }) => {
   return (
     <>
       <DropdownSelect
-        styles={{ ...colourStyles }}
+        styles={{ ...colorStyles }}
         theme={themeStyles}
         components={{ IndicatorSeparator }}
         // classNamePrefix="react-select"
@@ -27,7 +27,6 @@ export const Dropdown: FC<CurrentProps> = ({ prop }) => {
         value={getValue()}
         // isSearchable={false}
         options={prop}
-        placeholder="Categories..."
       />
     </>
   );

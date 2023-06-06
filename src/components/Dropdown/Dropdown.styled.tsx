@@ -5,7 +5,7 @@ import {
   ThemeConfig,
 } from 'react-select';
 
-export const colourStyles: StylesConfig<IOption> = {
+export const colorStyles: StylesConfig<IOption> = {
   control: () => ({
     display: 'flex',
   }),

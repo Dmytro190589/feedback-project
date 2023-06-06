@@ -9,9 +9,6 @@ export const StyledPlusIcon = styled(PlusIcon)`
 
 export const Box = styled.div`
   position: relative;
-  /* min-width: 375px;
-  min-height: 893px;
-  border-radius: 10px; */
   padding: 64px 24px 24px 24px;
   background-color: #f2f2f2;
 `;
