@@ -22,10 +22,8 @@ export const Dropdown: FC<CurrentProps> = ({ prop }) => {
         styles={{ ...colorStyles }}
         theme={themeStyles}
         components={{ IndicatorSeparator }}
-        // classNamePrefix="react-select"
         onChange={onChange}
         value={getValue()}
-        // isSearchable={false}
         options={prop}
       />
     </>

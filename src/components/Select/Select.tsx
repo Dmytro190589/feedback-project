@@ -16,6 +16,7 @@ export interface ISelectProps {
   styles?: StylesConfig<IOption, false, GroupBase<IOption>>;
   theme?: ThemeConfig;
   placeholder?: string;
+  name?: string;
 
   components?: any;
 
@@ -36,6 +37,7 @@ export const DropdownSelect: FC<ISelectProps> = ({
   styles,
   theme,
   components,
+  name,
 }) => {
   return (
     <Select
@@ -50,6 +52,7 @@ export const DropdownSelect: FC<ISelectProps> = ({
       onFocus={onFocus}
       isSearchable={false}
       placeholder={placeholder}
+      name={name}
     />
   );
 };

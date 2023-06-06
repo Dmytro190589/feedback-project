@@ -18,14 +18,13 @@ import { DropdownSelect } from 'components/Select/Select';
 interface CurrentProps {
   prop: IOption[];
 }
-interface MyFormValues {
-  feedback: string;
-  details: string;
-}
 
 export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
+  const initialValues = {
+    feedback: '',
+    details: '',
+  };
   const [currentProp, setCurrentProp] = useState('');
-  const initialValues: MyFormValues = { feedback: '', details: '' };
   const getValue = () =>
     currentProp ? prop.find(e => e.value === currentProp) : undefined;
   const onChange = (newValue: OnChangeValue<IOption, boolean>) =>
@@ -37,17 +36,18 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
       <Formik
         initialValues={initialValues}
         onSubmit={(values, actions) => {
-          alert(JSON.stringify(values, null, 2));
+          console.log(values);
           actions.setSubmitting(false);
         }}
       >
         <Form>
           <FeedbackTitle htmlFor="feedback"> Feedback Title</FeedbackTitle>
           <Description>Add a short, descriptive headline</Description>
-          <Input id="feedback" name="feedback" />
+          <Input type="text" name="feedback" />
           <Category>Category</Category>
           <Description>Choose a category for your feedback</Description>
           <DropdownSelect
+            name="select"
             onChange={onChange}
             value={getValue()}
             options={prop}
@@ -58,10 +58,8 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
             Include any specific comments on what should be improved, added,
             etc.
           </Description>
-          <InputDetails id="details" name="details" />
-          <Button color="first" width="addSave">
-            Add Feedback
-          </Button>
+          <InputDetails type="text" name="details" />
+          <button type="submit">Add Feedback</button>
           <Button color="third" width="delete">
             Cancel
           </Button>
