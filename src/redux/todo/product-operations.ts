@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { Product } from 'types/todo';
+import { Product } from 'helpers/types/todo';
 
 
 axios.defaults.baseURL = 'https://my-json-server.typicode.com/VLadIslavSurkov/json';

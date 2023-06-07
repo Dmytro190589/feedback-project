@@ -19,8 +19,11 @@ type Props = {
     | undefined;
   theme?: ThemeConfig;
   placeholder?: string;
+  required?: boolean;
+
 
   components?: any;
+
   name: string;
 } & Omit<
   StateManagerProps<IOption, false | true, GroupedOption>,

@@ -1,6 +1,6 @@
 import {  AnyAction, PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from './product-operations';
-import { ItodoState } from 'types/todo';
+import { ItodoState } from 'helpers/types/todo';
 
 
 const initialState: ItodoState = {
