@@ -3,7 +3,7 @@ import Select, { GroupBase, StylesConfig, ThemeConfig } from 'react-select';
 import { StateManagerProps } from 'react-select/dist/declarations/src/useStateManager';
 import { IOption } from 'models/CategoriesTypes';
 import { FocusEventHandler } from 'react';
-
+// modalAdd
 type GroupedOption = {
   label: string;
   options: IOption[];
