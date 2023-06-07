@@ -6,11 +6,18 @@ export type ButtonProps = {
   children?: React.ReactNode;
   color?: 'first' | 'second' | 'third' | 'fourth';
   width?: 'openModal' | 'postEdit' | 'addSave' | 'delete';
+  type?: 'submit';
 };
 
-export const Button = ({ onClick, children, color, width }: ButtonProps) => {
+export const Button = ({
+  onClick,
+  children,
+  color,
+  width,
+  type,
+}: ButtonProps) => {
   return (
-    <Container onClick={onClick} color={color} width={width}>
+    <Container type={type} onClick={onClick} color={color} width={width}>
       {children}
     </Container>
   );

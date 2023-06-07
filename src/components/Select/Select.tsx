@@ -1,4 +1,4 @@
-import { FC, FocusEventHandler } from 'react';
+import { FocusEventHandler } from 'react';
 import Select, {
   ActionMeta,
   GroupBase,
@@ -8,7 +8,7 @@ import Select, {
 } from 'react-select';
 import { IOption } from 'models/CategoriesTypes';
 
-export interface ISelectProps {
+type ISelectProps = {
   options: IOption[];
   value: IOption | undefined;
   onBlur?: FocusEventHandler;
@@ -16,6 +16,7 @@ export interface ISelectProps {
   styles?: StylesConfig<IOption, false, GroupBase<IOption>>;
   theme?: ThemeConfig;
   placeholder?: string;
+  name?: string;
 
   components?: any;
 
@@ -25,31 +26,8 @@ export interface ISelectProps {
         actionMeta: ActionMeta<IOption>
       ) => void)
     | undefined;
-}
-export const DropdownSelect: FC<ISelectProps> = ({
-  options,
-  value,
-  placeholder,
-  onChange,
-  onFocus,
-  onBlur,
-  styles,
-  theme,
-  components,
-}) => {
-  return (
-    <Select
-      styles={styles}
-      theme={theme}
-      options={options}
-      components={components}
-      classNamePrefix="react-select"
-      onChange={onChange}
-      onBlur={onBlur}
-      value={value}
-      onFocus={onFocus}
-      isSearchable={false}
-      placeholder={placeholder}
-    />
-  );
 };
+const DropdownSelect = (props: ISelectProps) => {
+  return <Select {...props} />;
+};
+export default DropdownSelect;

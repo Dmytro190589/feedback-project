@@ -2,7 +2,7 @@ import { OnChangeValue} from 'react-select';
 import { useState, FC } from 'react';
 import { IOption } from 'models/CategoriesTypes';
 import { IndicatorSeparator, colorStyles, themeStyles } from './Dropdown.styled';
-import { DropdownSelect } from 'components/Select/Select';
+import  DropdownSelect  from 'components/Select/Select';
 
 interface CurrentProps {
   prop: IOption[];
@@ -27,6 +27,7 @@ export const Dropdown: FC<CurrentProps> = ({ prop }) => {
         value={getValue()}
         // isSearchable={false}
         options={prop}
+        placeholder="Categories..."
       />
     </>
   );

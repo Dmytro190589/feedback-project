@@ -8,7 +8,7 @@ import {
   ProductTitle,
   ProductUpvote,
   ProductComments,
-} from './ProductList.stuyed';
+} from './ProductList.styled';
 
 export const ProductList: FC<List> = ({ products }) => {
   console.log(products);

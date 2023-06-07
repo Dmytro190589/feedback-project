@@ -1,35 +1,27 @@
-import { Formik } from 'formik';
-import { useState } from 'react';
-import { OnChangeValue } from 'react-select';
+import { Formik, Form } from 'formik';
 import { Button } from 'components/Buttons/Button';
 import {
   FeedbackTitle,
-  Input,
-  Form,
   Description,
   Category,
   InputDetails,
   Label,
   Title,
+  Input,
 } from './CategoryForm.styled';
 import { IOption } from 'models/CategoriesTypes';
-import { DropdownSelect } from 'components/Select/Select';
+import FormikReactSelect from 'components/Select/FormikReactSelect';
 
 interface CurrentProps {
   prop: IOption[];
 }
-interface MyFormValues {
-  feedback: string;
-  details: string;
-}
 
-export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
-  const [currentProp, setCurrentProp] = useState('');
-  const initialValues: MyFormValues = { feedback: '', details: '' };
-  const getValue = () =>
-    currentProp ? prop.find(e => e.value === currentProp) : undefined;
-  const onChange = (newValue: OnChangeValue<IOption, boolean>) =>
-    setCurrentProp((newValue as IOption).value);
+export default function CategoryForm({ prop }: CurrentProps) {
+  const initialValues = {
+    feedback: '',
+    details: '',
+    articleType: '',
+  };
   return (
     <>
       <Title>Great new feedback</Title>
@@ -37,20 +29,20 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
       <Formik
         initialValues={initialValues}
         onSubmit={(values, actions) => {
-          alert(JSON.stringify(values, null, 2));
+          console.log(values);
           actions.setSubmitting(false);
         }}
       >
         <Form>
           <FeedbackTitle htmlFor="feedback"> Feedback Title</FeedbackTitle>
           <Description>Add a short, descriptive headline</Description>
-          <Input id="feedback" name="feedback" />
+          <Input component="textarea" name="feedback" />
           <Category>Category</Category>
           <Description>Choose a category for your feedback</Description>
-          <DropdownSelect
-            onChange={onChange}
-            value={getValue()}
+          <FormikReactSelect
+            name="articleType"
             options={prop}
+            isSearchable={false}
             placeholder="Choose categories"
           />
           <Label htmlFor="details">Feedback Detail</Label>
@@ -58,9 +50,9 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
             Include any specific comments on what should be improved, added,
             etc.
           </Description>
-          <InputDetails id="details" name="details" />
-          <Button color="first" width="addSave">
-            Add Feedback
+          <InputDetails component="textarea" name="details" />
+          <Button type="submit" color="first" width="addSave">
+            Add
           </Button>
           <Button color="third" width="delete">
             Cancel
@@ -69,4 +61,4 @@ export const CategoryForm: React.FC<CurrentProps> = ({ prop }) => {
       </Formik>
     </>
   );
-};
+}
