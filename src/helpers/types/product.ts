@@ -1,15 +1,22 @@
-export type Product = {
+
+type Comments = {
+    id: string,
+    content: string,
+    user: any[]
+}
+
+export interface Product  {
     id: string;
     title: string
     category: string,
     upvotes: number,
     status: string,
     description: string,
-    comments: any[]
+    comments: Comments[]
 }
 
 export interface ItodoState {
-    productRequests: Product[];
+    products: Product[];
     isLoading: boolean,
     error: null | string,
 }

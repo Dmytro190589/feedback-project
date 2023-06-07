@@ -10,13 +10,14 @@ import { IOption } from 'models/CategoriesTypes';
 
 type ISelectProps = {
   options: IOption[];
-  value: IOption | undefined;
+  value?: IOption | undefined;
   onBlur?: FocusEventHandler;
   onFocus?: FocusEventHandler;
   styles?: StylesConfig<IOption, false, GroupBase<IOption>>;
   theme?: ThemeConfig;
   placeholder?: string;
   name?: string;
+  isSearchable?: boolean;
 
   components?: any;
 
@@ -27,7 +28,9 @@ type ISelectProps = {
       ) => void)
     | undefined;
 };
+
 const DropdownSelect = (props: ISelectProps) => {
+
   return <Select {...props} />;
 };
 export default DropdownSelect;

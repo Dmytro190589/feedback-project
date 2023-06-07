@@ -1,10 +1,10 @@
-import {  AnyAction, PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { AnyAction, PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { fetchProducts } from './product-operations';
-import { ItodoState } from 'helpers/types/todo';
+import { ItodoState } from 'helpers/types/product';
 
 
 const initialState: ItodoState = {
-  productRequests: [],
+  products: [],
   isLoading: false,
   error: null,
 };
@@ -19,15 +19,15 @@ export const todoSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       }).addCase(fetchProducts.fulfilled, (state, { payload }) => {
-        state.productRequests = payload;
+        state.products = payload;
         state.error = null;
         state.isLoading = false;
-      }).addMatcher(isError, (state, {payload}: PayloadAction<string>) => {
+      }).addMatcher(isError, (state, { payload }: PayloadAction<string>) => {
         state.error = payload;
         state.isLoading = false;
       });
   },
-  
+
 });
 
 export const todoReducer = todoSlice.reducer

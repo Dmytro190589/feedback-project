@@ -29,19 +29,19 @@ export const categoriesItem: IOption[] = [
   
 export const SortItem: IOption[] = [
   {
-    value: 'most Upvotes',
+    value: 'mostUpvotes',
     label: 'Most Upvotes',
   },
   {
-    value: 'least Upvotes',
+    value: 'leastUpvotes',
     label: 'Least Upvotes',
   },
   {
-    value: 'most Comments',
+    value: 'mostComments',
     label: 'Most Comments',
   },
   {
-    value: 'least Comments',
+    value: 'leastComments',
     label: 'Least Comments',
   }
 ];

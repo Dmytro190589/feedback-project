@@ -1,4 +1,4 @@
-import { List } from 'helpers/types/todo';
+import { List } from 'helpers/types/product';
 import { FC } from 'react';
 import { TbMessageCircle2Filled, TbChevronUp } from 'react-icons/tb';
 import {
@@ -11,8 +11,7 @@ import {
 } from './ProductList.styled';
 
 export const ProductList: FC<List> = ({ products }) => {
-  console.log(products);
-
+  // console.log(products);
 
   return (
     <div>
