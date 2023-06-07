@@ -1,4 +1,4 @@
-import { List } from 'types/todo';
+import { List } from 'helpers/types/todo';
 import { FC } from 'react';
 import { TbMessageCircle2Filled, TbChevronUp } from 'react-icons/tb';
 import {

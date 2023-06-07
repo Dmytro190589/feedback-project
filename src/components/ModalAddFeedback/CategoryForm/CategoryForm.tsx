@@ -1,4 +1,4 @@
-import { Formik, Form } from 'formik';
+import { Formik, Form, ErrorMessage } from 'formik';
 import { Button } from 'components/Buttons/Button';
 import {
   FeedbackTitle,
@@ -11,6 +11,7 @@ import {
 } from './CategoryForm.styled';
 import { IOption } from 'models/CategoriesTypes';
 import FormikReactSelect from 'components/Select/FormikReactSelect';
+import { AddFeedback } from 'helpers/schemas/addFeedback';
 
 interface CurrentProps {
   prop: IOption[];
@@ -27,37 +28,45 @@ export default function CategoryForm({ prop }: CurrentProps) {
       <Title>Great new feedback</Title>
 
       <Formik
+        validationSchema={AddFeedback}
+        validateOnBlur
         initialValues={initialValues}
         onSubmit={(values, actions) => {
           console.log(values);
           actions.setSubmitting(false);
         }}
       >
-        <Form>
-          <FeedbackTitle htmlFor="feedback"> Feedback Title</FeedbackTitle>
-          <Description>Add a short, descriptive headline</Description>
-          <Input component="textarea" name="feedback" />
-          <Category>Category</Category>
-          <Description>Choose a category for your feedback</Description>
-          <FormikReactSelect
-            name="articleType"
-            options={prop}
-            isSearchable={false}
-            placeholder="Choose categories"
-          />
-          <Label htmlFor="details">Feedback Detail</Label>
-          <Description>
-            Include any specific comments on what should be improved, added,
-            etc.
-          </Description>
-          <InputDetails component="textarea" name="details" />
-          <Button type="submit" color="first" width="addSave">
-            Add
-          </Button>
-          <Button color="third" width="delete">
-            Cancel
-          </Button>
-        </Form>
+        {({ values }) => (
+          <Form>
+            <FeedbackTitle htmlFor="feedback"> Feedback Title</FeedbackTitle>
+            <Description>Add a short, descriptive headline</Description>
+            <Input component="textarea" name="feedback" />
+            <ErrorMessage name="feedback" />
+
+            <Category>Category</Category>
+            <Description>Choose a category for your feedback</Description>
+            <FormikReactSelect
+              name="articleType"
+              options={prop}
+              isSearchable={false}
+              placeholder="Choose categories"
+              required={true}
+            />
+            <Label htmlFor="details">Feedback Detail</Label>
+            <Description>
+              Include any specific comments on what should be improved, added,
+              etc.
+            </Description>
+            <InputDetails component="textarea" name="details" />
+            <ErrorMessage name="details" />
+            <Button type="submit" color="first" width="addSave">
+              Add
+            </Button>
+            <Button color="third" width="delete">
+              Cancel
+            </Button>
+          </Form>
+        )}
       </Formik>
     </>
   );
