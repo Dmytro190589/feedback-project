@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
-
-
-
-
-export const Title = styled.h2``;
 export const FeedbackTitle = styled.label`
   margin-top: 24px;
 `;
@@ -14,22 +9,24 @@ export const Input = styled(Field)`
   padding: 8px;
   border: none;
 `;
-export const Description = styled.p`
-  margin-top: 3px;
-  margin-bottom: 16px;
-`;
-export const Form = styled.div``;
-export const Category = styled.h2`
+export const Category = styled.label`
   margin-top: 24px;
+  margin-bottom: 3px;
+`;
+export const FormSelect = styled(Field)`
+  margin-top: 16px;
+  width: 100%;
 `;
 
 export const InputDetails = styled(Field)`
   width: 100%;
   height: 120px;
+  margin-top: 16px;
   margin-bottom: 40px;
   border: none;
   padding: 8px;
 `;
 export const Label = styled.label`
   margin-top: 24px;
+  margin-bottom: 3px;
 `;
