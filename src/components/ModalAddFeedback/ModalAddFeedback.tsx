@@ -1,6 +1,6 @@
 import { StyledPlusIcon, Box } from './ModalAddFeedback.styled';
-import  CategoryForm  from './CategoryForm/CategoryForm';
-import { categoriesItem } from 'components/Dropdown/CategoriesItems';
+import CategoryForm from './CategoryForm/CategoryForm';
+import { categoriesItem } from 'selectItems/selectItems';
 interface IProps {
   onSubmit: () => void;
   onClose: () => void;

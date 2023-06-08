@@ -9,13 +9,17 @@ export const colorStyles: StylesConfig<IOption> = {
   control: () => ({
     display: 'flex',
   }),
-  singleValue: (base, state) => ({
+  placeholder: base => ({
     ...base,
-    color: state ? '#f2f4febf' : '#f2f4fe',
+    color: '#f2f4febf',
   }),
-  option: (base, { isFocused }) => ({
+  singleValue: (base, ) => ({
     ...base,
-    color: isFocused ? '#AD1FEA' : '#647196',
+    color: '#f2f4fe',
+  }),
+  option: (base, { isSelected }) => ({
+    ...base,
+    color: isSelected ? '#AD1FEA' : '#647196',
     ':active': {
       color: '#AD1FEA',
     },
@@ -27,7 +31,6 @@ export const colorStyles: StylesConfig<IOption> = {
 
 export const themeStyles: ThemeConfig = theme => ({
   ...theme,
-
   colors: {
     ...theme.colors,
     primary25: 'none',
