@@ -15,6 +15,7 @@ import {
   colorStyles,
   themeStyles,
   IndicatorSeparator,
+  CustomOption,
 } from './Dropdown.styled';
 
 const SortLine: FC<ISortLine> = ({ products, setupdateProducts }) => {
@@ -50,7 +51,7 @@ const SortLine: FC<ISortLine> = ({ products, setupdateProducts }) => {
         <DropdownSelect
           styles={{ ...colorStyles }}
           theme={themeStyles}
-          components={{ IndicatorSeparator }}
+          components={{ Option: CustomOption, IndicatorSeparator }}
           onChange={onChange}
           isSearchable={false}
           options={SortItem}
