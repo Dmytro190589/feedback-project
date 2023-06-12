@@ -23,7 +23,9 @@ export const AddForm = () => {
       <Formik
         initialValues={initialValues}
         onSubmit={values => console.log(values)}
+        
       >
+        ({()})
         <Form>
           <FeedbackTitle htmlFor="feedback">Feedback Title</FeedbackTitle>
           <Input
