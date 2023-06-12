@@ -1,6 +1,5 @@
 import { Button } from 'components/Buttons/Button';
-import {  Form, Formik } from 'formik';
-import { FC } from 'react';
+import { Form, Formik } from 'formik';
 import { categoriesItem } from 'selectItems/selectItems';
 import {
   Category,
@@ -11,7 +10,7 @@ import {
   Label,
 } from './ModalForm.styled';
 
-export const AddForm: FC = () => {
+export const AddForm = () => {
   const initialValues = {
     feedback: '',
     details: '',
@@ -52,7 +51,7 @@ export const AddForm: FC = () => {
             placeholder="Include any specific comments on what should be improved, added,
             etc."
           />
-          <Button type="submit" color="first" width="addSave">
+          <Button  type="submit" color="first" width="addSave">
             Add
           </Button>
           <Button color="third" width="delete">
