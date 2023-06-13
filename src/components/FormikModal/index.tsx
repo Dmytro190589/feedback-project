@@ -1,6 +1,7 @@
 import { Button } from 'components/Buttons/Button';
 import { Form, Formik } from 'formik';
 import { categoriesItem } from 'selectItems/selectItems';
+import { AddFeedback } from 'helpers/schemas/addFeedback';
 import {
   Category,
   FeedbackTitle,
@@ -8,6 +9,7 @@ import {
   Input,
   InputDetails,
   Label,
+  Title,
 } from './ModalForm.styled';
 
 export const AddForm = () => {
@@ -19,13 +21,12 @@ export const AddForm = () => {
 
   return (
     <>
-      <h2>Great new feedback</h2>
+      <Title>Great new feedback</Title>
       <Formik
+        validationSchema={AddFeedback}
         initialValues={initialValues}
         onSubmit={values => console.log(values)}
-        
       >
-        ({()})
         <Form>
           <FeedbackTitle htmlFor="feedback">Feedback Title</FeedbackTitle>
           <Input
@@ -53,7 +54,7 @@ export const AddForm = () => {
             placeholder="Include any specific comments on what should be improved, added,
             etc."
           />
-          <Button  type="submit" color="first" width="addSave">
+          <Button type="submit" color="first" width="addSave">
             Add
           </Button>
           <Button color="third" width="delete">
