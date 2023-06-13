@@ -1,4 +1,4 @@
-import { IOption } from 'models/CategoriesTypes';
+import { IOption } from 'helpers/models/CategoriesTypes';
 import { IoCheckmarkSharp } from 'react-icons/io5';
 
 import {
