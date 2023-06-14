@@ -6,7 +6,7 @@ import Select, {
   StylesConfig,
   ThemeConfig,
 } from 'react-select';
-import { IOption } from 'models/CategoriesTypes';
+import { IOption } from 'helpers/models/CategoriesTypes';
 
 type ISelectProps = {
   options: IOption[];
@@ -30,7 +30,6 @@ type ISelectProps = {
 };
 
 const DropdownSelect = (props: ISelectProps) => {
-
   return <Select {...props} />;
 };
 export default DropdownSelect;
