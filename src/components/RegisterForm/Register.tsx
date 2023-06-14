@@ -1,10 +1,9 @@
 import { ErrorMessage, Form, Formik } from 'formik';
-import { InputField } from './LoginForm.styled';
-
-export const LoginForm = () => {
+import { InputField } from './RegisterForm.styled';
+export const RegisterForm = () => {
   return (
     <Formik
-      initialValues={{ email: '', password: '' }}
+      initialValues={{ email: '', password: '', username: '' }}
       onSubmit={(values, { resetForm }) => {
         console.log(values);
         resetForm();
@@ -16,14 +15,19 @@ export const LoginForm = () => {
           flexDirection: 'column',
           alignItems: 'center',
           gap: '12px',
-          backgroundColor:"green"
+          backgroundColor: 'grey',
         }}
       >
-        <label htmlFor="login">Login</label>
-        <InputField type="email" name="email"  />
+        <label htmlFor="login">Register</label>
+        <InputField type="text" name="username" />
+        <ErrorMessage name="username" />
+
+        <InputField type="email" name="email" />
         <ErrorMessage name="email" />
-        <InputField type="password" name="password"  />
+
+        <InputField type="password" name="password" />
         <ErrorMessage name="password" />
+
         <button type="submit">Submit</button>
       </Form>
     </Formik>
