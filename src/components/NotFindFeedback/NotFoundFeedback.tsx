@@ -1,11 +1,11 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import NoFindIcon from '../../images/svg/no-find.svg';
 import { NoFindBox, NoFindText, NoFindTitle } from './NotFoundFeedback.styled';
 import { Button } from 'components/Buttons/Button';
 import Modal from 'components/Modal/Modal';
 import ModalAddFeedback from 'components/ModalAddFeedback/ModalAddFeedback';
 
-const NotFoundFeedback: FC = () => {
+const NotFoundFeedback = () => {
   const [isModal, setIsModal] = useState(false);
 
   const modalOpen = () => setIsModal(true);

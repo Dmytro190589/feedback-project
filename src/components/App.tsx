@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Suggestions } from '../pages/Suggestions/Suggestions';
 import { SharedLayout } from './SharedLayout/SharedLayout';
-
+import Login from 'pages/LoginForm/LoginForm';
 
 const App: FC = () => {
   return (
@@ -10,7 +10,7 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Suggestions />} />
-          <Route path="/ui" element={<div>ui!!!</div>} />
+          <Route path="/ui" element={<Login />} />
           <Route path="/ux" element={<div>ux!!!</div>} />
           <Route path="/enhancement" element={<div>en!!!</div>} />
           <Route path="/bug" element={<div>bug!!!</div>} />
