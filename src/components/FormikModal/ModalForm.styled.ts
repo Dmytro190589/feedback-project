@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
+
+export const Title = styled.h2`
+margin-bottom: 24px;
+`
 export const FeedbackTitle = styled.label`
-  margin-top: 24px;
 `;
 export const Input = styled(Field)`
+margin-top: 3px;
   width: 100%;
   height: 48px;
   padding: 8px;

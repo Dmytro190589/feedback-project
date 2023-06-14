@@ -1,7 +1,7 @@
 import { Button } from 'components/Buttons/Button';
-import {  Form, Formik } from 'formik';
-import { FC } from 'react';
+import { Form, Formik } from 'formik';
 import { categoriesItem } from 'selectItems/selectItems';
+import { AddFeedback } from 'helpers/schemas/addFeedback';
 import {
   Category,
   FeedbackTitle,
@@ -9,9 +9,10 @@ import {
   Input,
   InputDetails,
   Label,
+  Title,
 } from './ModalForm.styled';
 
-export const AddForm: FC = () => {
+export const AddForm = () => {
   const initialValues = {
     feedback: '',
     details: '',
@@ -20,8 +21,9 @@ export const AddForm: FC = () => {
 
   return (
     <>
-      <h2>Great new feedback</h2>
+      <Title>Great new feedback</Title>
       <Formik
+        validationSchema={AddFeedback}
         initialValues={initialValues}
         onSubmit={values => console.log(values)}
       >
