@@ -2,15 +2,15 @@ import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Suggestions } from '../pages/Suggestions/Suggestions';
 import { SharedLayout } from './SharedLayout/SharedLayout';
-import Login from 'pages/LoginForm/LoginForm';
+import Register from 'pages/Register/Register';
 
 const App: FC = () => {
   return (
     <>
       <Routes>
+        <Route path="/register" element={<Register />} />
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Suggestions />} />
-          <Route path="/ui" element={<Login />} />
           <Route path="/ux" element={<div>ux!!!</div>} />
           <Route path="/enhancement" element={<div>en!!!</div>} />
           <Route path="/bug" element={<div>bug!!!</div>} />
