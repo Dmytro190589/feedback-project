@@ -42,37 +42,36 @@ export default function RegisterForm() {
             </Email>
           )}
           {status ? (
-            <Title>Створити пароль для входу</Title>
-          ) : (
-            <Title>Регістрація</Title>
-          )}
-          {status ? (
             <>
+              <Title>Create a password</Title>
               <Container>
                 <Input
                   name="password"
                   type={eye ? 'text' : 'password'}
-                  placeholder="Створіть пароль"
+                  autoComplete="false"
+                  placeholder="Enter your password"
                 />
                 <Eye onClick={() => setEye(prev => !prev)}>
                   {eye ? <AiFillEyeInvisible /> : <AiFillEye />}
                 </Eye>
               </Container>
-              <Button type="submit">Зареєструвати акаунт</Button>
+              <Button type="submit">Sign up</Button>
             </>
           ) : (
             <>
+              <Title>Sign-Up</Title>
               <Input
                 name="email"
                 onChange={(e: { target: { value: SetStateAction<string> } }) =>
                   setEmail(e.target.value)
                 }
+                autoComplete="false"
                 value={email}
-                placeholder="Введі свій емейл"
+                placeholder="Enter your email"
               />
-              <Btn onClick={() => setStatus(true)}>Далі</Btn>
+              <Btn onClick={() => setStatus(true)}>Next</Btn>
 
-              <Login to="/login">Я маю акаунт</Login>
+              <Login to="/login">Login</Login>
             </>
           )}
         </Form>
