@@ -12,18 +12,20 @@ import {
   Eye,
   Container,
 } from './RegisterForm.styled';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
+import { register } from 'redux/user/auth-operations';
+import { useAppDispatch } from 'hooks/useHooks';
 export default function RegisterForm() {
   const [status, setStatus] = useState(false);
-  const [email, setEmail] = useState('');
   const [eye, setEye] = useState(false);
+  const dispatch = useAppDispatch();
   return (
     <Content>
       <Formik
         onSubmit={values => {
-          console.log({ email: email, password: values.password });
+          dispatch(register(values));
         }}
-        initialValues={{ email: '', password: '' }}
+        initialValues={{ email: '', password: '', username: '' }}
       >
         <Form
           style={{
@@ -37,7 +39,7 @@ export default function RegisterForm() {
         >
           {status && (
             <Email onClick={() => setStatus(false)}>
-              {email}
+              {/* {email} */}
               <FaPencilAlt />
             </Email>
           )}
@@ -62,12 +64,17 @@ export default function RegisterForm() {
               <Title>Sign-Up</Title>
               <Input
                 name="email"
-                onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                  setEmail(e.target.value)
-                }
+                // onChange={(e: { target: { value: SetStateAction<string> } }) =>
+                //   setEmail(e.target.value)
+                // }
                 autoComplete="false"
-                value={email}
+                // value={email}
                 placeholder="Enter your email"
+              />
+              <Input
+                name="username"
+                autoComplete="false"
+                placeholder="Username"
               />
               <Btn onClick={() => setStatus(true)}>Next</Btn>
 
