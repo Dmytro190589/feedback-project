@@ -25,7 +25,7 @@ export default function RegisterForm() {
         onSubmit={values => {
           dispatch(register(values));
         }}
-        initialValues={{ email: '', password: '', username: '' }}
+        initialValues={{ email: '', password: '', username: '', name: '' }}
       >
         <Form
           style={{
@@ -39,7 +39,7 @@ export default function RegisterForm() {
         >
           {status && (
             <Email onClick={() => setStatus(false)}>
-              {/* {email} */}
+              Correct email
               <FaPencilAlt />
             </Email>
           )}
@@ -62,20 +62,18 @@ export default function RegisterForm() {
           ) : (
             <>
               <Title>Sign-Up</Title>
-              <Input
-                name="email"
-                // onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                //   setEmail(e.target.value)
-                // }
-                autoComplete="false"
-                // value={email}
-                placeholder="Enter your email"
-              />
+              <Input name="name" autoComplete="false" placeholder="Name" />
               <Input
                 name="username"
                 autoComplete="false"
                 placeholder="Username"
               />
+              <Input
+                name="email"
+                autoComplete="false"
+                placeholder="Enter your email"
+              />
+
               <Btn onClick={() => setStatus(true)}>Next</Btn>
 
               <Login to="/login">Login</Login>

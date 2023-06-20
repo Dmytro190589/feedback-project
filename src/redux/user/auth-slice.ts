@@ -13,7 +13,6 @@ const initialState: IUserState = {
     },
     isLoading: false,
     error: null,
-    auth: undefined
 };
 
 const authSlice = createSlice({
