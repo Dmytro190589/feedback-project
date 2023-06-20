@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { IOperationsUser, IUserState } from 'helpers/types/user';
+import { IOperationsUser, IUserState,IOperationsUserLogin } from 'helpers/types/user';
 
 
 axios.defaults.baseURL = 'https://feedbacke-api-service.onrender.com';
@@ -27,7 +27,7 @@ export const register = createAsyncThunk<IUserState, IOperationsUser, { rejectVa
     }
 );
 
-export const login = createAsyncThunk<IUserState, void, { rejectValue: string }>(
+export const login = createAsyncThunk<IUserState, IOperationsUserLogin, { rejectValue: string }>(
     'auth/login',
     async (user, { rejectWithValue }) => {
         try {

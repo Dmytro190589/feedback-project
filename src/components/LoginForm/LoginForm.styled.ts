@@ -12,11 +12,6 @@ export const Content = styled.div`
 export const Title = styled.h2`
   margin-bottom: 40px;
 `;
-export const Email = styled.p`
-  color: white;
-  margin-bottom: 30px;
-  cursor: pointer;
-`;
 export const Input = styled(Field)`
   width: 100%;
   height: 40px;

@@ -1,9 +1,9 @@
 import { Form, Formik } from 'formik';
-import { FaPencilAlt } from 'react-icons/fa';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
+import { useAppDispatch } from 'hooks/useHooks';
+
 import {
   Content,
-  Email,
   Button,
   Input,
   Login,
@@ -11,17 +11,15 @@ import {
   Eye,
   Container,
 } from './LoginForm.styled';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
+import { login } from 'redux/user/auth-operations';
 export default function SigIn() {
-  const [status, setStatus] = useState(false);
-  const [email, setEmail] = useState('');
   const [eye, setEye] = useState(false);
+  const dispatch = useAppDispatch();
   return (
     <Content>
       <Formik
-        onSubmit={values => {
-          console.log({ email: email, password: values.password });
-        }}
+        onSubmit={values => dispatch(login(values))}
         initialValues={{ email: '', password: '' }}
       >
         <Form
@@ -34,20 +32,10 @@ export default function SigIn() {
             flexDirection: 'column',
           }}
         >
-          {status && (
-            <Email onClick={() => setStatus(false)}>
-              {email}
-              <FaPencilAlt />
-            </Email>
-          )}
           <Title>Login</Title>
           <Input
             name="email"
-            onChange={(e: { target: { value: SetStateAction<string> } }) =>
-              setEmail(e.target.value)
-            }
             autoComplete="false"
-            value={email}
             placeholder="Enter your email"
           />
           <Container>
