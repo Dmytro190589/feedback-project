@@ -23,7 +23,7 @@ const persistedReducer = persistReducer(persistConfig, authReducer);
 
 const rootReducer = combineReducers({
     auth: persistedReducer,
-    todo: todoReducer
+    todo:  todoReducer
 });
 
 
