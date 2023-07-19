@@ -11,7 +11,7 @@ export const Suggestions = () => {
   const dispatch = useAppDispatch();
   const { isLoading, products, error } = useTypedSelector(state => state.todo);
   const [updateProducts, setupdateProducts] = useState<Product[]>([]);
-
+;
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
