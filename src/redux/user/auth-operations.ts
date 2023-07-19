@@ -1,6 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { IOperationsUser, IUserState,IOperationsUserLogin } from 'helpers/types/user';
+import { IAppState } from 'helpers/types/appState';
 
 
 axios.defaults.baseURL = 'https://feedbacke-api-service.onrender.com';
@@ -33,7 +34,6 @@ export const login = createAsyncThunk<IUserState, IOperationsUserLogin, { reject
         try {
             const { data } = await axios.post('/auth/login', user);
             setAuthHeader(data.token);
-            console.log(data);
             return data;
         } catch (e) {
             return rejectWithValue('Please change your email ore name and try again');
@@ -53,3 +53,22 @@ export const logout = createAsyncThunk(
         }
     });
 
+export const fetchingCurrentUser = createAsyncThunk<IUserState, undefined, { rejectValue: string }>(
+    'auth/current',
+    async (_, thunkAPI) => {
+        const state = thunkAPI.getState() as IAppState;
+        const persistedToken = state.auth.token;
+
+        if (persistedToken) {
+            setAuthHeader(persistedToken);
+        }
+        try {
+            const { data } = await axios.get('/user/current');
+            return data;
+        } catch (e) {
+            if (e instanceof AxiosError) {
+                return thunkAPI.rejectWithValue(e.response?.data.message);
+            }
+        }
+    }
+);
